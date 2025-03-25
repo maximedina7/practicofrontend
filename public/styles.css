@@ -1,0 +1,126 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general con degradado azul */
+body {
+    background: linear-gradient(135deg, #005b96, #0099cc);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Contenedor de la biografía */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);  /* Fondo con transparencia */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 50px;
+}
+
+/* Estilo de la sección de perfil */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #0078d4;
+    box-shadow: 0 10px 20px rgba(0, 120, 212, 0.3);
+}
+
+.bio {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0078d4;  /* Azul fuerte */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Estilos para la sección de experiencia */
+.experience {
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #0078d4;  /* Azul fuerte */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+ul li {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #005b96;
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #003d66;  /* Azul más oscuro */
+    transform: translateY(-5px);
+}
+
+/* Efectos responsivos */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
