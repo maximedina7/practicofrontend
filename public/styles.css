@@ -7,7 +7,7 @@
 
 /* Fondo general con degradado azul */
 body {
-    background: linear-gradient(135deg, #005b96, #0099cc);
+    background: linear-gradient(135deg, #000000, #0099cc);
     font-family: 'Arial', sans-serif;
     color: #fff;
     text-align: center;
