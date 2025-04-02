@@ -110,6 +110,44 @@ ul li:hover {
     transform: translateY(-5px);
 }
 
+/* lista de compañeros */
+.companeros {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.companeros h2 {
+    color: #007BFF;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.companeros ul {
+    list-style: none;
+    padding: 0;
+}
+
+.companeros li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.companeros a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.companeros a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
 /* Tabla de Materias */
 table {
     width: 100%;
