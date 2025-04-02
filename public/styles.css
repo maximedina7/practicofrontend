@@ -5,14 +5,15 @@
     box-sizing: border-box;
 }
 
-/* Fondo general con degradado azul */
+/* Fondo general con degradado */
 body {
-    background: linear-gradient(135deg, #000000, #0099cc);
+    background: linear-gradient(135deg, #121212, #004466); /* Fondo más oscuro */
     font-family: 'Arial', sans-serif;
-    color: #fff;
+    color: #f5f5f5; /* Letras más claras */
     text-align: center;
     padding: 20px;
 }
+
 /* Contenedor principal */
 .wrapper {
     max-width: 1200px;
@@ -22,11 +23,12 @@ body {
 
 /* Contenedor de la biografía y secciones */
 .container {
-    background-color: rgba(255, 255, 255, 0.9);  /* Fondo con transparencia */
+    background-color: rgba(255, 255, 255, 0.95);  
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     padding: 40px;
     margin-top: 50px;
+    color: #333; /* Texto oscuro */
 }
 
 /* Sección de perfil */
@@ -40,17 +42,39 @@ body {
 
 .profile-img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    border: 5px solid #0078d4;
-    box-shadow: 0 10px 20px rgba(0, 120, 212, 0.3);
+    border: 5px solid #00aaff;
+    box-shadow: 0 10px 20px rgba(0, 170, 255, 0.3);
 }
 
+/* Biografía */
 .bio {
     max-width: 600px;
     text-align: left;
     padding: 20px;
+}
+
+h1 {
+    font-size: 3rem; /* Más grande */
+    color: #0055aa;  
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.6rem;  
+    color: #0077cc;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem; /* Un poco más grande */
+    line-height: 1.8;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 400;
 }
 
 /* Sección de experiencia */
@@ -58,57 +82,83 @@ body {
     text-align: left;
 }
 
-/* Sección de materias */
-.estudiando {
-    text-align: left;
-    margin-top: 30px;
+h3 {
+    font-size: 2rem; /* Más grande */
+    color: #0055aa;  
+    margin-bottom: 20px;
 }
-/* Estilo para la tabla de Materia/Estado */
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.3rem;
+}
+
+ul li {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #0077cc;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #0055aa;
+    transform: translateY(-5px);
+}
+
+/* Tabla de Materias */
 table {
-    width: 100%; /* Ocupar todo el ancho */
+    width: 100%;
     margin: 20px auto;
     border-collapse: collapse;
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 th, td {
     border: 1px solid black;
-    padding: 10px;
+    padding: 15px;
     text-align: left;
+    font-size: 1.2rem;
 }
 
 th {
-    background-color: #007BFF;
+    background-color: #0055aa;
     color: white;
+    font-size: 1.3rem;
 }
 
 /* Input de búsqueda */
 input {
     width: 100%;
     max-width: 600px;
-    padding: 10px;
+    padding: 12px;
     margin: 10px auto;
-    border: 2px solid #007BFF;
+    border: 2px solid #0055aa;
     border-radius: 5px;
     outline: none;
-    font-size: 16px;
+    font-size: 18px;
     display: block;
 }
 
 input:focus {
-    border-color: #0056b3;
+    border-color: #003366;
 }
 
 /* Estado de la materia */
 #estadoMateria {
-    font-size: 18px;
+    font-size: 1.5rem;
     margin-top: 10px;
     font-weight: bold;
-    color: #333;
+    color: #222;
 }
+
 /* Sección de redes sociales */
 .contenedor {
     background-color: white;
@@ -117,27 +167,29 @@ input:focus {
     margin: auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .redes {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-top: 10px;
+    color: #0055aa;
 }
 
 a {
     display: inline-block;
-    font-size: 18px;
-    color: #007BFF;
+    font-size: 1.4rem;
+    color: #0077cc;
     text-decoration: none;
     font-weight: bold;
     margin-top: 5px;
 }
 
 a:hover { 
-    color: #0056b3; 
+    color: #003366; 
 }
-/* Efectos responsivos */
+
+/* Responsividad */
 @media (max-width: 768px) {
     .profile {
         flex-direction: column;
@@ -153,6 +205,6 @@ a:hover {
     }
 
     input {
-        width: 100%; /* Adaptar input en pantallas pequeñas */
+        width: 100%;
     }
 }
