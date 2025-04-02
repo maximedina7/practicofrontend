@@ -29,8 +29,165 @@
                     <li>💼 Dueño de un negocio llamado "Despensa Silvia"</li>
                     <li>🎓 Estudiante en la carrera de Desarrollo y Calidad de Software</li>
                 </ul>
+            
             </div>
-        </div>
-    </div>
+            
+            <div class="estudiando">
+                <h3>Materias cursadas</h3>
+                <ul>
+                    <li>Fundamentos del control de calidad </li>
+                    <li>Desarrollo Front end</li>
+                    <li>Seminario informático II</li>
+                    <li>Inglés II</li>
+                    <li>Formacion Humanística</li>
+                </ul>
+            
+            </div>
+            
+            <title>Materia/Estado</title>
+            <link rel="stylesheet" href="styles.css">
+            <style>
+                body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0; }
+                table { width: 80%; margin: 20px auto; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+                th, td { border: 1px solid black; padding: 10px; text-align: left; }
+                th { background-color: #007BFF; color: white; }
+                input {
+                    width: 50%;
+                    padding: 10px;
+                    margin: 10px 0;
+                    border: 2px solid #007BFF;
+                    border-radius: 5px;
+                    outline: none;
+                    font-size: 16px;
+                }
+                input:focus {
+                    border-color: #0056b3;
+                }
+                #estadoMateria {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+            </style>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("busqueda").addEventListener("keyup", filtrarMaterias);
+        });
+
+        function filtrarMaterias() {
+            let input = document.getElementById("busqueda").value.toLowerCase();
+            let filas = document.querySelectorAll("tbody tr");
+            let estadoTexto = document.getElementById("estadoMateria");
+            let encontrado = false;
+            
+            filas.forEach(fila => {
+                let materia = fila.cells[0].textContent.toLowerCase();
+                let estado = fila.cells[2].textContent;
+                
+                if (materia.includes(input) && input !== "") {
+                    fila.style.display = "";
+                    estadoTexto.textContent = "Estado: " + estado;
+                    encontrado = true;
+                } else {
+                    fila.style.display = "none";
+                }
+            });
+            
+            if (!encontrado) {
+                estadoTexto.textContent = "";
+            }
+        }
+            </script>
+        </head>
+        <body>
+            <h2>Materia/Estado</h2>
+            <input type="text" id="busqueda" placeholder="Buscar materia..." onkeyup="filtrarMaterias()">
+            <p id="estadoMateria"></p>
+        <table>
+        <thead>
+            <tr>
+                <th>Materia</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Fundamentos del control de calidad</th>
+                <th>Cursando</th>
+            </tr>
+            <tr>
+                <th>Desarrollo de front end</th>
+                <th>Cursando</th>
+            </tr>
+            <tr>
+                <th>Formacion humanistica</th>
+                <th>Cursando</th>
+            </tr>
+            <tr>
+                <th>Ingles II</th>
+                <th>Cursando</th>
+            </tr>
+            <tr>
+                <th>Algebra I</th>
+                <th>Recursando</th>
+            </tr>
+        </tbody>
+    </table>
+            </div>
+
+            <title>Mis Redes</title>
+            <style>
+                body { 
+                    font-family: Arial, sans-serif; 
+                    text-align: center; 
+                    background-color: #f0f0f0; 
+                    padding: 20px; 
+                }
+                .contenedor {
+                    background-color: white;
+                    width: 50%;
+                    margin: auto;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                .redes {
+                    font-size: 20px;
+                    margin-top: 10px;
+                }
+                a {
+                    display: inline-block;
+                    font-size: 18px;
+                    color: #007BFF;
+                    text-decoration: none;
+                    font-weight: bold;
+                    margin-top: 5px;
+                }
+                a:hover { 
+                    color: #0056b3; 
+                }
+            </style>
+        </head>
+        <body>
+        
+            <div class="contenedor">
+                <h2>Mis Redes</h2>
+        
+                <p class="redes">
+                    📷 Instagram:  
+                    <a href="https://www.instagram.com/maxi_medina03/?__pwa=1" target="_blank">
+                        @maxi_medina03
+                    </a>
+                </p>
+        
+                <p class="redes">
+                    📱 WhatsApp:  
+                    <a href="https://wa.me/3865506528" target="_blank">
+                        Chatear en WhatsApp
+                    </a>
+                </p>
+            </div>
+
 </body>
 </html>
